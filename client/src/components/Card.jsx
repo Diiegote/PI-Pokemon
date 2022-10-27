@@ -1,21 +1,49 @@
-import React from "react"
+import React from "react";
+import { Link } from "react-router-dom";
+import Card from 'react-bootstrap/Card';
 import "./Card.css"
-import { Link } from "react-router-dom"
-// import imgDefault from "../Imagenes/"
 
-export default function Card({ Name, Image, Type,Id,Life}) {
-    return (
-        <div className="card">
-          <div className="imagen">
-            <img  src={Image} alt="img not found" height= "250px"/>
-            </div>
-            <div className="descripcion">
-              <Link to={`/pokemons/${Id}`}>
-          <button className="CardName">{Name} </button>  
-          </Link>
-          <h3>{Life}</h3>
-            <h3 className="CardType">{Type}</h3>
-            </div>
-        </div>
-    ) 
-}
+export default function Cards({ Name, Image, Type, Id,Str,Life }) {
+  return (
+    <div className="Cards">
+      <Card style={{ width: '18rem',backgroundPosition:"center",backgroundImage:"url(https://i.pinimg.com/236x/66/c4/60/66c460844291da1585e2aae182aed0d0.jpg)",backgroundSize:"cover" }}><Link to={`/pokemon/${Id}`}>
+      <h2><Card.Header style={{ color: "rgba(255, 245, 245, 0.8)"}} className="Id">  {Name}   </Card.Header></h2>
+        <Card.Img className="container" variant="top" src={Image}  />
+        <Card.Body >
+          <h1><Card.Title className="container">
+            # {Id}
+          </Card.Title></h1>
+          <h3><Card.Text className="container">
+            {Type}
+          </Card.Text></h3>
+          <h3><Card.Text className="container">str: {Str}</Card.Text></h3>
+        </Card.Body>
+      </Link>
+      </Card>
+    </div>
+
+)
+};
+
+{/* {[
+  'light',
+
+].map((variant) => (
+  <Card
+    bg={variant.toLowerCase()}
+    key={variant}
+    text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+    style={{ width: '18rem' }}
+    className="mb-2"
+  >
+    <Link to={`/pokemon/${Id}`}>
+      <Card.Header>{Name}</Card.Header>
+      <Card.Img variant="top" src={Image} />
+      <Card.Body>
+        <Card.Title>{Type}</Card.Title>
+        <Card.Text>
+        </Card.Text>
+      </Card.Body>
+    </Link>
+  </Card>
+))} */}

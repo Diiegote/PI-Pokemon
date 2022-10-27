@@ -1,29 +1,33 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from 'react-redux'
-import { Link, useParams } from "react-router-dom";
-// import { getPokemonsId } from "../Redux/actions";
-import "../components/Detail.css"
+import { useDispatch} from 'react-redux'
+import { Link, useHistory, useParams } from "react-router-dom";
 import axios from "axios"
+import { eliminar } from "../Redux/actions";
+
 
 
 export default function Detail() {
-  const [poke,setPoke] = useState()
-  const dispatch = useDispatch()
-  const { id } = useParams()
-  // const PokeId = useSelector(state => state.pokemonsId) // me traigo todo lo que esta en el estado de pokemonsId y lo guardo en la constante
+  const [poke,setPoke] = useState();
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const history = useHistory()
   useEffect(() => {
-  axios (`http://localhost:3001/pokemons/${id}`)
+  axios (`http://localhost:3001/pokemon/${id}`)
     .then(response =>{
       setPoke(response.data) 
-  })}, [id])
+  })}, [id]);
 
-
+  function handleDelete(e){
+    dispatch(eliminar(id));
+    alert("Pokemon Eliminado")
+    history.push("/pokemons")
+  };
 
   return poke ?
     (
       // <div className="detail">
       <div className="conteiner">
-        <div className="detalle">
+        <div>
           <Link to="/pokemons"><button>Back</button></Link>
           <div className="imagen">
             <div className="containerName">
@@ -59,11 +63,19 @@ export default function Detail() {
               </div>
             </div>
           </div>
+          {
+            typeof poke?.id === "string"?
+          <button onClick={handleDelete}>Eliminar</button>:<></>
+          }
+          {
+            typeof poke?.id === "string"?
+            <Link to={`/pokemonsEdit/${id}`}><button>Editar</button></Link>:<></>
+          }
         </div>
 
       </div>
       //  </div>
-    ) : <div className="cargando" ><h1>Loading...</h1></div>
+    ) : <div></div>
 
 }
 

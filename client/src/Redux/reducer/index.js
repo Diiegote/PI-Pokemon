@@ -1,6 +1,5 @@
 //import { allPokemons } from "../../../../api/src/Controllers.js/ControllersPokemon"
-import { GET_ALL_TYPES, GET_FILTER_CREATE, GET_POKEMONS, GET_POKEMONS_NAME, GET_TYPE_LIFE } from "../actions"
-import { GET_POKEMONSID } from "../actions"
+import { GET_ALL_TYPES, GET_FILTER_CREATE, GET_ID, GET_POKEMONS, GET_POKEMONS_NAME} from "../actions"
 import { GET_TYPES } from "../actions"
 import { GET_ORDER_NAME } from "../actions"
 import { GET_ORDER_STRENGTH } from "../actions"
@@ -8,7 +7,7 @@ import { POST_POKEMONS } from "../actions"
 
 const initialState = {
   pokemons: [],
-  pokemonsId: {},
+  pokemonsId:[],
   allPokemons: [],
   allTypes: []
 }
@@ -22,7 +21,7 @@ function rootReducer(state = initialState, action) {
         allPokemons: action.payload
 
       }
-    case GET_POKEMONSID:
+    case GET_ID:
       return {
         ...state,
         pokemonsId: action.payload
@@ -94,7 +93,6 @@ function rootReducer(state = initialState, action) {
         ...state,
         pokemons: action.payload === "All" ? state.allPokemons : created_Filter
       }
-
     default:
       return state
   }

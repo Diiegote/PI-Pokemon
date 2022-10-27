@@ -1,0 +1,63 @@
+ .body{
+     background-color: rgb(4, 3, 42); 
+     width: auto;
+     height: auto;
+     background-size: cover;
+     background-repeat: repeat;
+    }  
+ .Card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    font-family:'sans-serif';
+
+} 
+
+ .Select {
+     display: flex; 
+    justify-content:center; 
+    border-radius: 1rem;
+    margin:1rem;
+    width: 50rem;
+    height: 5rem;
+    margin-left: 35rem;
+    /* background-color: black; */
+} 
+.select1{
+    display: flex;
+    align-items: center;
+    font-family:'sans-serif';
+}
+.select1 div{
+    margin: 1em;
+    
+}
+.select1 div select{
+   color: rgb(4, 3, 42);  
+    /* background-image: url(https://i.pinimg.com/236x/66/c4/60/66c460844291da1585e2aae182aed0d0.jpg); */
+    /* text-shadow: 8px 8px 8px 8px rgba(230, 3, 3, 0.7); */
+    height: 1.8em;
+    width: 7em;
+    border-radius: 0.5em;
+}
+.paginado{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    margin:auto;
+    
+}
+.paginado div{
+    margin: 1em;
+    width: 1.3em;
+}
+.paginado button{
+    width: 2em;
+    border: none;
+    box-shadow: 4px 4px 3px 3px rgba(0, 0, 0, 0.8);
+    background-image: url(https://i.pinimg.com/236x/66/c4/60/66c460844291da1585e2aae182aed0d0.jpg);
+    color: rgba(255, 255, 255, 0.8);
+}
