@@ -6,14 +6,14 @@ const {Type} = require ("../db");
 
 async function apiPokemons(){
   try {
-    let allPokemons =(await axios("https://pokeapi.co/api/v2/pokemon?limit=40")).data.results
+    let allPokemons =(await axios("https://pokeapi.co/api/v2/pokemon?limit=120")).data.results
     const dataApi =await Promise.all ( allPokemons.map(async e =>{
     const pokemon =  (await axios (e.url)).data
        return pokemon
       }))
       const pokemonFinal = dataApi.map(e =>({
         
-          image : e.sprites.other.home?.front_default ? e.sprites.other.home.front_default : e.sprites.other.home?.front_shiny ,
+          image : e.sprites?.other?.["official-artwork"]?.front_default  ,
           id : e.id,
           name : e.name,
           types: e.types.map(e =>e.type.name).join(", "),

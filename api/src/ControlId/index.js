@@ -12,7 +12,7 @@ async function getPokemonDbById(req, res) {
         id: api.id,
         name: api.name,
         types: api.types.map((t) => t.type.name).join(", "),
-        image: api.sprites.other.home?.front_default ? api.sprites.other.home.front_default : api.sprites.other.home?.front_shiny,
+        image: api.sprites?.other?.["official-artwork"]?.front_default,
         Life: api.stats[0].base_stat,
         strength: api.stats[1].base_stat,
         defense: api.stats[2].base_stat,

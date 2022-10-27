@@ -7,12 +7,14 @@
       background-size: cover; 
      box-shadow: 5px 5px 5px 5px rgba(0, 0, 5, 0.8);
      overflow: hidden;
+     
 
  }
 
  A:link {
      text-decoration: none;
      color: rgb(0, 0, 0);
+     
  }
 
  .container {
@@ -25,12 +27,15 @@
      /* background: rgba(0, 0, 0, .4); */
      opacity: 0;
      transition: .5s;
+     
    
  }
 
  .container {
      color: rgba(255, 245, 245, 0.8);
      margin: 10px 1; 
+     font-family:'sans-serif';
+     
  }
 
  .Cards:hover .container {
@@ -38,4 +43,5 @@
  }
  .Id{
     text-align: center;
+    
  }

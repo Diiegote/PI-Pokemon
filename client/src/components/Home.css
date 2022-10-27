@@ -21,6 +21,7 @@
     width: 50rem;
     height: 5rem;
     margin-left: 35rem;
+    font-family:'sans-serif';
     /* background-color: black; */
 } 
 .select1{
@@ -39,6 +40,7 @@
     height: 1.8em;
     width: 7em;
     border-radius: 0.5em;
+    font-family:'sans-serif';
 }
 .paginado{
     width: 100%;
@@ -48,6 +50,7 @@
     align-content: center;
     border: none;
     margin:auto;
+    font-family:'sans-serif';
     
 }
 .paginado div{
@@ -60,4 +63,5 @@
     box-shadow: 4px 4px 3px 3px rgba(0, 0, 0, 0.8);
     background-image: url(https://i.pinimg.com/236x/66/c4/60/66c460844291da1585e2aae182aed0d0.jpg);
     color: rgba(255, 255, 255, 0.8);
+    
 }

@@ -6,6 +6,8 @@ import Paginado from "./Paginado";
 import NavBar from "./NavBar";
 import Cards from "./Card";
 import "./Home.css"
+import "./Paginado.css"
+
 
 
 export default function Home() {
@@ -116,6 +118,7 @@ export default function Home() {
               pokemonsPerPage={pokemonsPerPage}
               getAllPokemons={getAllPokemons.length}
               paginado={paginado}
+              paginaActual={currentPage}
             />
             </div>
 
