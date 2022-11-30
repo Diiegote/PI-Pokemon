@@ -5,13 +5,16 @@ import  "./LandingPage.css"
 
 export default function LandingPage(){
   return (
-    <div className= "background">
-    <div>
-      <h1 className="titulo">Crea tu propio Pokemon</h1>
-      <Link to ="/pokemons">
-      <h2 className="a">¡Comenzar!</h2>
-      </Link> 
-    </div>
+      <div className= "contenedor">
+      <div><h1>Welcome to my pokemon project!</h1>
+      <h2>You will find more than 100 pokemons with their characteristics and you will be able to create your own!</h2>
+      <div className="h3">
+     <Link to ="/pokemons">
+      <h3> ¡Go!</h3>
+      </Link>
+      </div>
+      <div><h4>By Diego Martinotti</h4></div>
+      </div>
     </div>
   )
 }

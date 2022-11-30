@@ -1,47 +1,45 @@
- .Cards {
-      margin: 50px; 
-       /* width: 20em;  */
-     padding: 0;
-     box-sizing: border-box;
-     /* border-radius: 50%; */
-      background-size: cover; 
-     box-shadow: 5px 5px 5px 5px rgba(0, 0, 5, 0.8);
-     overflow: hidden;
-     
-
+.card-container{
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -5px;
+    height: 450px;
+    margin: 15px;
+    transition: 0.3s;
+    animation: aese-in;
+    border-radius: 12px;
  }
-
- A:link {
-     text-decoration: none;
-     color: rgb(0, 0, 0);
-     
+ .card-container:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px ;
  }
-
- .container {
-     /* width: 20%;
-     height: 45%; */
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     align-items: center;
-     /* background: rgba(0, 0, 0, .4); */
-     opacity: 0;
-     transition: .5s;
-     
-   
+ .image-container img{
+    overflow: hidden;
+    width: 15rem;
+     padding: 0 auto;
+    margin:1rem;
  }
-
- .container {
-     color: rgba(255, 245, 245, 0.8);
-     margin: 10px 1; 
-     font-family:'sans-serif';
-     
+ 
+ .card-container h1{
+ color: black;
+ display: flex;
+ justify-content:center;
+ padding: 5px;
+ margin: 0 auto;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  }
-
- .Cards:hover .container {
-     opacity: 1;
+ .card-container h2{
+    color: black;
+    display: flex;
+    justify-content:center;
+    padding: 5px;
+    margin: 0 auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  }
- .Id{
-    text-align: center;
-    
+ .card-container h3{
+    color: black;
+    display: flex;
+    justify-content:center;
+    padding: 5px;
+    margin: 0 auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  }

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { getPokemonsByName } from '../Redux/actions'
 import { useDispatch } from 'react-redux'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import "./SearchBar.css"
 
 export default function SearchBar(props) {
 
@@ -19,18 +18,13 @@ export default function SearchBar(props) {
     setCurrentPage(1)
   }
   return (
-    <div>
-      <Form className="d-flex">
-        <Form.Control
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-          value={name} onChange={(e) => handleSearch(e)}
-        />
-        <Button variant="dark" type="Submit" onClick={(e) => handleSubmit(e)}>Search</Button>
-
-      </Form>
+    <div className='search-bar'>
+       <input 
+      type ="text"
+      placeholder='Search...'
+      onChange={(e)=>handleSearch(e)}
+      />
+      <button className='botom' type = "Submit" onClick={(e)=> handleSubmit(e)}>Search</button>
     </div>
   )
 }

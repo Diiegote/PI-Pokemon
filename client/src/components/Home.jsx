@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllTypes, getPokemons, getOrderName, getOrderStrength, getFilterCreate } from "../Redux/actions";
 import { getTypes } from "../Redux/actions";
 import Paginado from "./Paginado";
-import NavBar from "./NavBar";
 import Cards from "./Card";
 import "./Home.css"
 import "./Paginado.css"
+import SearchBar from "./SearchBar";
 
 
 
@@ -36,6 +36,10 @@ export default function Home() {
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+  function handleClick() {
+    dispatch(getPokemons());
+    setCurrentPage(1);
+  }
 
 
   useEffect(() => {
@@ -69,39 +73,39 @@ export default function Home() {
 
 
   return (
-    <div className="body">
-    <NavBar/>
-       
-        <div className="Select">
-        <div className="select1">
-          <div>
-        <select className="primary" defaultValue="Api or Created" onChange={(e) => handleFilterCreated(e)}>
+    <div>
+         <div className="logo"><a href="/pokemons"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="NotFound"></img></a></div>
+         <SearchBar/>
+
+        <div className="conteiner-select">
+         
+        <select defaultValue="Api or Created" onChange={(e) => handleFilterCreated(e)}>
             <option disabled>Api or Created</option>
             <option value="All">All </option>
             <option value="Created">Created</option>
             <option value="Api">Api</option>
           </select>
-          </div>
+       
 
-          <div>
+          
       <select defaultValue="Order"
         onChange={e => handleOrderAZ(e)}>
         <option disabled >Order-AZ</option>
         <option value='A-Z'>A-Z</option>
         <option value='Z-A'>Z-A</option>
       </select>
-      </div>
+     
 
-      <div>
+    
       <select defaultValue="OrderStr"
         onChange={e => handleOrderStr(e)}>
         <option disabled >OrderStr</option>
         <option value="Max-Min">Max-Min</option>
         <option value="Min-Max">Min-Max</option>
       </select>
-      </div>
+     
 
-      <div>
+    
       <select defaultValue="AllTypes" onChange={e => handleFilterByType(e)}>
         <option disabled value='AllTypes'>AllTypes</option>
         {Types.map(t => (
@@ -109,11 +113,11 @@ export default function Home() {
           <option key={t.id} value={t.name}>{t.name}</option>
           ))}
       </select>
-      </div>
+      
       </div>
 
-      </div>
-            <div>
+     
+            <div className="container-paginado">
               <Paginado
               pokemonsPerPage={pokemonsPerPage}
               getAllPokemons={getAllPokemons.length}
@@ -122,7 +126,7 @@ export default function Home() {
             />
             </div>
 
-            <div className="Card">
+            <div className="cards-container">
             {
               currentPokemons.length ?
                 currentPokemons?.map(e => {
@@ -138,9 +142,17 @@ export default function Home() {
                         />
                     </div>
                   )
-                }) : <div style={{height:"43.1em"}}><h1>Cargando</h1></div>
+                }) : <div><h1>Cargando</h1></div>
               }
               </div>
+              {/* <div className="container-paginado">
+              <Paginado
+              pokemonsPerPage={pokemonsPerPage}
+              getAllPokemons={getAllPokemons.length}
+              paginado={paginado}
+              paginaActual={currentPage}
+            />
+            </div> */}
             </div>
   )
 }
