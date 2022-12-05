@@ -6,3 +6,18 @@
     margin-top: -100px;
    margin-left: 650px;
 }
+.search-bar input[type="text"]{
+   background: #fff;
+   width: 350px;
+   height: 50px;
+   padding: 0 25px;
+   border-radius: 25px 0 0 25px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.search-bar  input{
+   position: relative;
+   display: inline-block;
+   font-size: 20px;
+   box-sizing: border-box;
+   transition: .5s;
+}

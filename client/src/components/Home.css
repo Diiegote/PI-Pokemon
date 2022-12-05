@@ -1,8 +1,9 @@
+
 .logo{
     width: 300px;
     display: flex;
     justify-content: center;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     margin-top: 1rem;
  
  }
@@ -21,21 +22,6 @@
     
  }
  
- input{
-    position: relative;
-    display: inline-block;
-    font-size: 20px;
-    box-sizing: border-box;
-    transition: .5s;
- }
- input[type="text"]{
-    background: #fff;
-    width: 350px;
-    height: 50px;
-    padding: 0 25px;
-    border-radius: 25px 0 0 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- }
  .botom{
     left: -5px;
  position: relative;
@@ -43,14 +29,14 @@
  width: 130px;
  height: 50px;
  cursor: pointer;
- background-color: cadetblue;
+ background-color: rgb(196, 73, 73);
  color: rgb(12, 1, 1);
  font-size: 20px;
  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  
  }
  .botom:hover{
-    background: #cfd366;
+    background: #e5e830;
  }
  .conteiner-select{
     display: flex;
@@ -60,9 +46,9 @@
     border: solid 1px;
     width: 500px;
     height: 75px;
-    margin-left: 87.5rem;
+    margin-left: 87rem;
     margin-top: -65px;
-    background-color: cadetblue;
+    background-color: rgb(196, 73, 73);
  
  }
  .conteiner-select select{
@@ -70,7 +56,28 @@
     color: #030303;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     font-size: 15px;
  
+ }
+ .button-create{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  margin-top: 100px;
+ }
+ .button-create button{
+   border: solid 1px rgb(196, 73, 73);
+   border-radius: 25px;
+   width: 200px;
+   height: 65px;
+   cursor: pointer;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: large;
+   background-color: rgb(196, 73, 73);
+ }
+ .cargando{
+   /* background-image: url("https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif"); */
+   width: 300px;
+   margin-left: 400px;
  }

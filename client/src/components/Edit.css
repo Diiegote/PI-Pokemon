@@ -1,0 +1,62 @@
+ .container-edit{
+   height: 100vh;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: space-around;
+   justify-content: center;
+   background-image: url("https://images5.alphacoders.com/769/769896.png");
+ }
+ .container-edit button {
+   font-size: 18px;
+   margin-left:  -105px;
+   margin-top: 5px;
+   cursor: pointer;
+   border: solid 1px rgb(196, 73, 73);
+   border-radius: 25px;
+   width: 70px;
+ }
+ /* .container-items{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   border: solid 1px; 
+}   */
+ 
+ .container-form{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-content: center;
+   justify-content: space-between;
+   align-items: baseline;
+   font-size: large;
+   border: 2px solid rgba(160, 95, 95, 0.388);
+   width: 400px;
+   height: 750px;
+   box-shadow: 0px 0px 15px 5px  rgb(196, 73, 73);  
+   color: black;
+} 
+.container-form input[type="text"]{
+   font-size: large;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   text-align: center;
+   border-radius: 25px;
+   width: 155px;
+   border: solid 1px rgb(196, 73, 73);
+}
+.container-form input[type="number"]{
+   font-size: large;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   text-align: center;
+   border-radius: 25px;
+   width: 155px;
+   border: solid 1px rgb(196, 73, 73);
+}
+.button-confirm button{
+   margin-left: 45px;
+   margin-bottom: 10px;
+   border: solid 1px rgb(196, 73, 73);
+   border-radius: 25px;
+   width: 70px;
+}

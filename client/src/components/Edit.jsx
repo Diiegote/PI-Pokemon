@@ -49,19 +49,20 @@ export default function EditarPoke() {
         }
         
         return(
-            <div className="contenedor">
-            <form onSubmit={e=>handleSubmit(e)}>
-               <h4><label>Name: </label><input type="text" value={input.name} placeholder={pokemonsId.name} name="name" onChange={handleChange}/> </h4>
-                <h4><label>Image: </label><input type="text" value={input.image} placeholder={pokemonsId.image} name="image" onChange={handleChange}/></h4>
-                <h4> <label>Life: </label><input type="number" value={input.life} placeholder={pokemonsId.life} name="life" onChange={handleChange}/></h4>
-                <h4><label>Strength: </label><input type="number" value={input.strength} placeholder={pokemonsId.strength} name="strength" onChange={handleChange}/></h4>
-                <h4><label>Defense: </label><input type="number" value={input.defense} placeholder={pokemonsId.defense} name="defense" onChange={handleChange}/></h4>
-                <h4> <label>Speed: </label><input type="number" value={input.speed} placeholder={pokemonsId.speed} name="speed" onChange={handleChange}/></h4>
-                <h4><label> Height: </label><input type="number" value={input.height} placeholder={pokemonsId.height} name="height" onChange={handleChange}/></h4>
-                <h4><label> Weight: </label><input type="number" value={input.weight} placeholder={pokemonsId.weight} name="weight" onChange={handleChange}/></h4>
-             <Link to={`/pokemon/${id}`}><button >Back</button></Link> 
-            <button type='submit'>Edit</button>
+            <div className="container-edit">
+            <div className="container-items">
+            <form className="container-form" onSubmit={e=>handleSubmit(e)}>
+            <Link to={`/pokemon/${id}`}><button>Back</button></Link> 
+               <label className="name">Name</label> <input type="text" value={input.name} placeholder={pokemonsId.name} name="name" onChange={handleChange}/>
+                <label>Image </label><input type="text" value={input.image} placeholder={pokemonsId.image} name="image" onChange={handleChange}/>
+                 <label>Life </label><input type="number" value={input.life} placeholder={pokemonsId.life} name="life" onChange={handleChange}/>
+               <label>Strength </label><input type="number" value={input.strength} placeholder={pokemonsId.strength} name="strength" onChange={handleChange}/>
+                <label>Defense </label><input type="number" value={input.defense} placeholder={pokemonsId.defense} name="defense" onChange={handleChange}/>
+               <label>Speed </label><input type="number" value={input.speed} placeholder={pokemonsId.speed} name="speed" onChange={handleChange}/>
+                <label> Height </label><input type="number" value={input.height} placeholder={pokemonsId.height} name="height" onChange={handleChange}/>
+                <label> Weight </label><input type="number" value={input.weight} placeholder={pokemonsId.weight} name="weight" onChange={handleChange}/>
+            <div className="button-confirm"><button type='submit'>Confirm</button></div>
             </form>
-        </div>
+        </div></div>
       )
     };

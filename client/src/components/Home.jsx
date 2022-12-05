@@ -36,10 +36,10 @@ export default function Home() {
   const paginado = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-  function handleClick() {
-    dispatch(getPokemons());
-    setCurrentPage(1);
-  }
+  // function handleClick() {
+  //   dispatch(getPokemons());
+  //   setCurrentPage(1);
+  // }
 
 
   useEffect(() => {
@@ -115,6 +115,9 @@ export default function Home() {
       </select>
       
       </div>
+      <div className="button-create">
+       <a href="/createpokemons"> <button>Create your Pokémon</button></a>
+      </div>
 
      
             <div className="container-paginado">
@@ -142,17 +145,17 @@ export default function Home() {
                         />
                     </div>
                   )
-                }) : <div><h1>Cargando</h1></div>
+                }) : <div className="cargando"><img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif" alt="Not Fund"></img></div>
               }
               </div>
-              {/* <div className="container-paginado">
+              {  <div className="container-paginado">
               <Paginado
               pokemonsPerPage={pokemonsPerPage}
               getAllPokemons={getAllPokemons.length}
               paginado={paginado}
               paginaActual={currentPage}
             />
-            </div> */}
+            </div> }
             </div>
   )
 }

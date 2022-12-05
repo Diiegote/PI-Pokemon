@@ -3,15 +3,15 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-bottom: 4rem;
-    padding-top: 10rem;
-    margin: 0 auto;;
+    padding-bottom: 3rem;
+    padding-top: 6rem;
+    margin: 0 auto;
  }
  .paginado button{
     width: 35px;
     margin: 7px;
     border-radius: 25px;
-    background-color: cadetblue;
+    background-color: rgb(196, 73, 73);
     cursor: pointer;
     color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -24,4 +24,5 @@
   border: transparent;
   color: rgb(0, 0, 0);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
  } 
