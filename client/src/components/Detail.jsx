@@ -32,7 +32,7 @@ export default function Detail() {
       <div className="conteiner-card-detail">
         <div className="button-back"><a href="/pokemons"><button>Back</button></a></div>
      {poke.name}
-        <div className="imagen-pokemon"><img src={poke.image} alt="Image Not Found" height="165px" /></div>
+        <div className="imagen-pokemon"><img src={poke.image} alt="ImageNotFound" height="165px" /></div>
         { <div className="poke-types">
           {poke.types instanceof Array ? poke.types.map(e => e.name).join(", ") : poke.types ? poke.types : "Sin Tipos"}  </div> }
           <div className="id">N° {id}</div>
@@ -56,7 +56,7 @@ export default function Detail() {
         </div>
       </div>
       </div>
-    ) : <div className="cargandop"><img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif"></img></div>
+    ) : <div className="cargandop"><img src="https://i.pinimg.com/originals/9f/b1/25/9fb125f1fedc8cc62ab5b20699ebd87d.gif" alt="ImageNotFund"></img></div>
 
 }
 

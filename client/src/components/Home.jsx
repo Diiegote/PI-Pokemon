@@ -16,8 +16,8 @@ export default function Home() {
   const getAllPokemons = useSelector(state => state.pokemons)
   const Types = useSelector(state => state.allTypes)
 
-  const [order, setOrder] = useState('');
-  const [orderStr, setOrderStr] = useState('')
+  const [order, setOrder] = useState('Order-AZ');
+  const [orderStr, setOrderStr] = useState('OrderStr')
 
 
 
@@ -88,7 +88,7 @@ export default function Home() {
        
 
           
-      <select defaultValue="Order"
+      <select defaultValue={order}
         onChange={e => handleOrderAZ(e)}>
         <option disabled >Order-AZ</option>
         <option value='A-Z'>A-Z</option>
@@ -97,7 +97,7 @@ export default function Home() {
      
 
     
-      <select defaultValue="OrderStr"
+      <select defaultValue={orderStr}
         onChange={e => handleOrderStr(e)}>
         <option disabled >OrderStr</option>
         <option value="Max-Min">Max-Min</option>
